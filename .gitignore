@@ -1,0 +1,9 @@
+# O site e gerado: e a saida do `expo export -p web` com as reescritas do
+# host estatico. Nada aqui e editado a mao.
+#
+# O export do Expo coloca as fontes em `assets/node_modules/...` — o mesmo
+# nome de pasta que a regra abaixo ignora. Sem esta excecao, os 53 arquivos
+# (Literata + as fontes de icones) ficariam de fora do repositorio e o site
+# publicado abriria sem fonte serifada e sem icones.
+node_modules/
+!assets/node_modules/
