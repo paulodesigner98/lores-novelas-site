@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Lores Novelas</title>
+
+    <!-- Progressive Web App -->
+    <link rel="manifest" href="/lores-novelas-site/manifest.json" />
+    <meta name="theme-color" content="#F7F2E8" />
+    <meta
+      name="description"
+      content="Lores Novelas - leitor de novelinhas, capitulo a capitulo, com retomada de leitura e capitulos disponiveis offline."
+    />
+
+    <!-- Instalacao como app no iOS / iPadOS (Safari) -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Lores Novelas" />
+    <link rel="apple-touch-icon" href="/lores-novelas-site/icons/icon-192.png" />
+
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+
+    <!--
+      Service Worker: habilita a instalacao como app e a abertura offline do
+      shell (HTML, chunks JS, fontes e icones). O registro nunca pode derrubar
+      o app: sem secure context ou sem suporte, o app segue funcionando
+      apenas com rede.
+    -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/lores-novelas-site/sw.js').then(
+            function (registration) {
+              console.log('[lores] service worker registrado em', registration.scope);
+            },
+            function (error) {
+              console.warn('[lores] nao foi possivel registrar o service worker', error);
+            }
+          );
+        });
+      }
+    </script>
+  <link rel="icon" href="/lores-novelas-site/favicon.ico"/></head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/lores-novelas-site/_expo/static/js/web/__expo-metro-runtime-97703ae02682710149335928b974f18d.js" defer></script><script src="/lores-novelas-site/_expo/static/js/web/__common-39acb9cc6e1fa7a163d2aa0c938301b4.js" defer></script><script src="/lores-novelas-site/_expo/static/js/web/entry-9f035ccb9028082d708f715f8f759d0f.js" defer></script>
+</body>
+</html>

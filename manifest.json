@@ -1,0 +1,29 @@
+{
+  "name": "Lores Novelas",
+  "short_name": "Lores",
+  "description": "Leitor de novelinhas, capitulo a capitulo, com retomada de leitura e capitulos disponiveis offline.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "id": "/lores-novelas-site/",
+  "start_url": "/lores-novelas-site/",
+  "scope": "/lores-novelas-site/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F2E8",
+  "theme_color": "#F7F2E8",
+  "categories": ["books", "entertainment"],
+  "icons": [
+    {
+      "src": "/lores-novelas-site/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/lores-novelas-site/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
